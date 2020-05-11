@@ -10,7 +10,6 @@ import { MessageService } from '../message.service';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
-  selectedHero: Hero;
 
   constructor(private heroService: HeroService, private messageService: MessageService) { }
 
@@ -22,11 +21,6 @@ export class HeroesComponent implements OnInit {
     //此时this.heroService.getHeroes()返回的是以一个Observable对象，subscribe为启动Observable执行的一种简单方式
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes);
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroService: Selected hero id=${hero.id}`);
   }
 
 }

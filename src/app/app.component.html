@@ -1,3 +1,13 @@
 <h1>Welcome to {{title | uppercase}}</h1>
-<app-heroes></app-heroes>
+
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<router-outlet></router-outlet>
+<!-- 能在AppComponent中使用RouterOutlet，
+    是因为AppModule导入了AppRoutingModule，
+    而AppRoutingModule导出了RouterModule -->
+
 <app-messages></app-messages>
