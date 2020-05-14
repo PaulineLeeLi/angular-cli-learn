@@ -1,0 +1,16 @@
+<div>
+    <h4><label for="search-box">Hero Search</label></h4>
+
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+    <ul class="search-result">
+        <!-- heroes$是一个约定，表示这是一个Observable，而不是数组
+        *ngFor不能直接使用Observable对象，需要使用async管道
+        async是Angular的AsyncPipe管道，可以自动订阅Observable，不需要在.ts中重复订阅 -->
+        <li *ngFor="let hero of heroes$ | async">
+            <a routerLink="/detail/{{hero.id}}">
+                {{hero.name}}
+            </a>
+        </li>
+    </ul>
+</div>

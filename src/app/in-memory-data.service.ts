@@ -8,10 +8,19 @@ import { Hero } from './hero';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 1, name: 'Spring' },
-      { id: 2, name: 'Summer' },
-      { id: 3, name: 'Autumn' },
-      { id: 4, name: 'Winter' }
+      { id: 1, name: 'January' },
+      { id: 2, name: 'February' },
+      { id: 3, name: 'March' },
+      { id: 4, name: 'April' },
+      { id: 1, name: 'May' },
+      { id: 2, name: 'June' },
+      { id: 3, name: 'July' },
+      { id: 4, name: 'August' },
+      { id: 1, name: 'September' },
+      { id: 2, name: 'October' },
+      { id: 3, name: 'November' },
+      { id: 4, name: 'December' }
+
     ];
     return {heroes};
   }
